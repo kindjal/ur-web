@@ -34,4 +34,4 @@ foreach my $ns (@ns) {
     $res or die "Error loading UR Namespace $ns: $error";
 }
 
-1;
+start;
