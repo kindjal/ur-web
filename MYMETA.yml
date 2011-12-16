@@ -1,0 +1,31 @@
+---
+abstract: 'A standalone UR Web application'
+author: []
+build_requires:
+  Module::Build: ''
+  UR: 0.31
+configure_requires:
+  Module::Build: 0.36
+dynamic_config: 0
+generated_by: 'Module::Build version 0.3607'
+license: gpl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: UrWeb
+provides:
+  SDM::Dancer::Handlers:
+    file: './lib/UrWeb/Handlers.pm'
+  UrWeb:
+    file: './lib/UrWeb.pm'
+  UrWeb::Runner:
+    file: './lib/UrWeb/Runner.pm'
+  UrWeb::Starman:
+    file: './lib/UrWeb/Starman.pm'
+  UrWeb::Starman::Server:
+    file: './lib/UrWeb/Starman/Server.pm'
+requires:
+  UR: 0.31
+resources:
+  license: http://www.gnu.org/licenses/old-licenses/gpl-1.0.txt
+version: 0.1

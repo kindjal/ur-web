@@ -1,0 +1,11 @@
+Source: ur-web
+Section: perl
+Priority: optional
+Build-Depends: debhelper (>= 7), libdancer-perl
+Build-Depends-Indep: perl (>= 5.9.5)
+
+Package: ur-web
+Architecture: all
+Depends: perl (>= 5.9.5), libdancer-perl, UR
+Description: A standalone web application for UR
+ A standalone web application for UR.

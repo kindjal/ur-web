@@ -1,0 +1,5 @@
+#!/usr/bin/make -f
+
+%:
+	PATH="/bin:/usr/bin" \
+	dh $@
