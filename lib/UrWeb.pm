@@ -44,6 +44,7 @@ class UrWeb {
         watch => {
             is    => 'Text',
             doc   => 'specify a path to watch in development mode',
+            default_value => '',
         },
         workers => {
             is    => 'Number',
