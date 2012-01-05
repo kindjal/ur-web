@@ -1,5 +1,7 @@
 #!/usr/bin/make -f
 
+unexport PERL5LIB
+
 %:
 	PATH="/bin:/usr/bin" \
 	dh $@
