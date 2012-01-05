@@ -1,6 +1,6 @@
 .gitignore
 MANIFEST
-bin/ur-web.pl
+bin/ur-web
 Build.PL
 debian/control
 debian/changelog
