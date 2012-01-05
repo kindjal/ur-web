@@ -28,6 +28,7 @@ class UrWeb {
         env => {
             is    => 'Text',
             valid_values => ['development','production'],
+            default_value => 'production',
             doc   => 'run mode, development enables reloading changed files',
         },
         fixed_port => {
@@ -35,16 +36,20 @@ class UrWeb {
             default_value => 0,
             doc   => 'force the use of the same port',
         },
+        single_request => {
+            is    => 'Boolean',
+            default_value => 0,
+            doc   => 'specify that each worker handle one request and exit',
+        },
+        watch => {
+            is    => 'Text',
+            doc   => 'specify a path to watch in development mode',
+        },
         workers => {
             is    => 'Number',
             default_value => 20,
             doc   => 'specify the number of worker processes',
         },
-        single_request => {
-            is    => 'Boolean',
-            default_value => 0,
-            doc   => 'specify that each worker handle one request and exit',
-        }
     ],
 };
 
@@ -100,8 +105,7 @@ sub run_starman {
         '--single_request' => $self->single_request
     );
     if ($self->{env} and $self->{env} eq 'development') {
-        $options{'-r'} = '';
-        $options{'-R'} = $self->psgi_path;
+        $options{'-R'} = join(",",$self->psgi_path, $self->watch);
     }
     $runner->parse_options( %options );
     $runner->run;
