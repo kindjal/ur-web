@@ -13,7 +13,7 @@ use Dancer::ModuleLoader;
 # to where ur-web runs.  This will provide trivial
 # default files.  UR Namespaces will have Dancer
 # Handlers.pm that probably redefine these.
-my $appdir = dirname dirname __FILE__;
+my $appdir = dirname __FILE__;
 set appdir => $appdir;
 set public => path($appdir,'public');
 set views  => path($appdir,'views');
