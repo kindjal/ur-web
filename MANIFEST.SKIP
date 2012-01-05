@@ -11,3 +11,8 @@ Makefile$
 ^cover_db
 ^.*\.log
 ^.*\.swp$
+debian/ur-web
+debian/ur-web.postinst.debhelper
+debian/ur-web.preinst.debhelper
+debian/ur-web.prerm.debhelper
+debian/ur-web.substvars
