@@ -6,4 +6,5 @@ debian/ur-web.postinst.debhelper
 debian/ur-web.preinst.debhelper
 debian/ur-web.prerm.debhelper
 debian/ur-web.substvars
+debian/files
 debian/ur-web/
