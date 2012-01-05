@@ -17,5 +17,5 @@ script
 
    export URWEB_NAMESPACES
 
-   exec sudo -i -u www-data /usr/bin/ur-web $URWEB_OPTIONS >> ${URWEB_LOG_DIR}/ur-web.log 2>&1
+   exec sudo -E -u www-data /usr/bin/perl $URWEB_PERLOPTS /usr/bin/ur-web $URWEB_OPTIONS >> ${URWEB_LOG_DIR}/ur-web.log 2>&1
 end script

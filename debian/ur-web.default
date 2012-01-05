@@ -7,7 +7,12 @@ URWEB_NAMESPACES=""
 #
 # Set options for the ur-web process.
 #
-URWEB_OPTIONS="--fixed-port --workers 10 --single-request --port 8090"
+URWEB_OPTIONS="--fixed-port --workers 10 --single-request --port 8090 --env production"
+
+#
+# Set options for perl
+#
+URWEB_PERLOPTS=""
 
 #
 # Default log directory
