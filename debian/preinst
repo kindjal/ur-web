@@ -27,7 +27,8 @@ case "$1" in
     [ -d ~www-data ] || \
         mkdir -p ~www-data
 
-    mkdir -p /var/log/ur-web/ur-web.log
+    mkdir -p /var/log/ur-web
+    touch /var/log/ur-web/ur-web.log
     chown -R www-data: /var/log/ur-web
     ;;
 
