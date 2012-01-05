@@ -6,9 +6,10 @@ debian/control
 debian/changelog
 debian/rules
 debian/compat
-debian/ur-web.upstart
 debian/copyright
+debian/ur-web.upstart
 debian/ur-web.logrotate
+debian/ur-web.default
 debian/preinst
 MANIFEST.SKIP
 lib/UrWeb.pm
