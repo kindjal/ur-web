@@ -2,4 +2,14 @@
 # This is a list of UR namespaces that ur-web should serve.
 # It can be space or comma separated.
 #
-URWEB_NAMESPACES=
+URWEB_NAMESPACES=""
+
+#
+# Set options for the ur-web process.
+#
+URWEB_OPTIONS="--fixed-port --workers 10 --single-request --port 8090"
+
+#
+# Default log directory
+#
+URWEB_LOG_DIR=/var/log/ur-web

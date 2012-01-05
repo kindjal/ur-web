@@ -6,18 +6,16 @@ stop on runlevel [06]
 
 respawn
 
-env LOG_DIR=/var/log/ur-web
-
-pre-start script
-    if [ ! -d "$LOG_DIR" ]; then
-        mkdir -p "$LOG_DIR"
-        chmod 755 "$LOG_DIR"
-    fi
-end script
-
 script
    [ -f /etc/profile.d/tnsnames.sh ] && . /etc/profile.d/tnsnames.sh
    [ -f /etc/default/ur-web ] && . /etc/default/ur-web
+
+   if [ ! -d "$URWEB_LOG_DIR" ]; then
+       mkdir -p "$URWEB_LOG_DIR"
+       chmod 755 "$URWEB_LOG_DIR"
+   fi
+
    export URWEB_NAMESPACES
-   exec sudo -i -u www-data /usr/bin/ur-web --fixed-port >> ${LOG_DIR}/ur-web.log 2>&1
+
+   exec sudo -i -u www-data /usr/bin/ur-web $URWEB_OPTIONS >> ${URWEB_LOG_DIR}/ur-web.log 2>&1
 end script
