@@ -10,10 +10,10 @@ my $class = Module::Build->subclass(
     sub ACTION_install {
         my $self = shift;
 
-        fcopy('lib/config.yml','blib/lib/UrWeb/config.yml') or die $!;
-        dircopy('lib/public','blib/lib/UrWeb/public') or die $!;
-        dircopy('lib/views','blib/lib/UrWeb/views') or die $!;
-        dircopy('lib/environments','blib/lib/UrWeb/environments') or die $!;
+        fcopy('lib/UrWeb/config.yml','blib/lib/UrWeb/config.yml') or die $!;
+        dircopy('lib/UrWeb/public','blib/lib/UrWeb/public') or die $!;
+        dircopy('lib/UrWeb/views','blib/lib/UrWeb/views') or die $!;
+        dircopy('lib/UrWeb/environments','blib/lib/UrWeb/environments') or die $!;
 
         $self->SUPER::ACTION_install;
     }
