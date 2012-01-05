@@ -1,4 +1,3 @@
-#package UR::Namespace::Command::Sys::Web::Starman::Server;
 package UrWeb::Starman::Server;
 
 use base qw( Starman::Server );
