@@ -1,0 +1,5 @@
+#
+# This is a list of UR namespaces that ur-web should serve.
+# It can be space or comma separated.
+#
+URWEB_NAMESPACES=

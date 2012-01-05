@@ -48,7 +48,7 @@ if ( setting('environment') eq 'production') {
 # Then I thought maybe a command line option passed to Main.psgi,
 # but I can't figure out how to pass args to Main.psgi.  So the environment
 # will have to do for now.
-my @ns = split(/\s+/,$ENV{URWEB_NAMESPACES}) if ( defined $ENV{URWEB_NAMESPACES} );
+my @ns = split(/[\s+,]/,$ENV{URWEB_NAMESPACES}) if ( defined $ENV{URWEB_NAMESPACES} );
 foreach my $ns (@ns) {
     $ns = ucfirst(lc($ns));
     warn "load $ns handlers";
