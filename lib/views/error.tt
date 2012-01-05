@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>No UR Namespaces</title>
+    <!-- order is important in loading css -->
+    <link rel="shortcut icon" href="/images/gc_favicon.png" type="image/png" />
+    <link rel="stylesheet" href="/css/blueprint/screen.css" type="text/css" media="screen, projection" />
+    <link rel="stylesheet" href="/css/blueprint/print.css" type="text/css" media="print" />
+    <link rel="stylesheet" href="/css/master.css" type="text/css" media="screen, projection" />
+    <link rel="stylesheet" href="/css/buttons.css" type="text/css" media="screen, projection" />
+    <link rel="stylesheet" href="/css/icons.css" type="text/css" media="screen, projection" />
+    <link rel="stylesheet" href="/css/forms.css" type="text/css" media="screen, projection" />
+    <link rel="stylesheet" href="/css/jquery-ui.css" type="text/css" />
+    <link rel="stylesheet" href="/css/jquery-ui-overrides.css" type="text/css" media="screen, projection" />
+  <script type="text/javascript" src="/js/pkg/jquery.js"></script>
+
+  <script type="text/javascript">
+   (function($) {
+     $(document).ready(function() {
+        $("#status").removeClass('loading').addClass('error').html('<% message %>');
+     });
+   })(jQuery)
+  </script>
+ </head>
+ <body>
+  <div class="page" style="width: 500px;padding-top: 45px;">
+    <div class="content rounded shadow" style="padding-top: 0;" >
+      <div class="header rounded-top gradient-grey">
+        <div class="container" style="width: 480px;">
+          <div class="title app_cache_miss_32">
+            <h1>Error Loading View</h1>
+          </div>
+        </div>
+      </div>
+
+    <div class="container" style="width: 480px;">
+      <div class="span-12 last">
+        <div class="rounded" style="margin-bottom: 10px;">
+          <div class="padding10">
+            <p></p>
+            <div id="status"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+ </body>
+</html>
