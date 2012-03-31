@@ -1,0 +1,26 @@
+
+=pod
+
+=head2 UR Web
+
+UR Web is a Perl Dancer web framework for visualizing UR classes.
+
+=head2 Use it
+
+A production use case:
+
+ exec sudo -E -u www-data /usr/bin/perl $URWEB_PERLOPTS /usr/bin/ur-web $URWEB_OPTIONS >> ${URWEB_LOG_DIR}/ur-web.log 2>&1
+
+A testing use case for SDM:
+
+ SDM_DEPLOYMENT=testing URWEB_NAMESPACES=sdm /usr/bin/perl -I /gscuser/mcallawa/git/sdm/deploy/lib ./bin/ur-web --env development --port 8091 --fixed-port
+
+=head2 Get the code
+
+ git clone git@github.com:kindjal/ur-web.git
+
+=head2 Author
+
+Matt Callaway <mcallaway@genome.wustl.edu>
+
+=cut
